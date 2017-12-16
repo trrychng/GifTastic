@@ -2,7 +2,8 @@
 
 
 
-var animals = ["bird", "cat", "dog","trump","panda","elephant","chipmunk","pikachu","chow chow","eagle","tiger","lion","bear"];
+var animals = ["bird", "cat", "dog","trump","chicken","pig","walrus","squirrel","deer","polar bear","monkey","fish",
+"panda","elephant","chipmunk","pikachu","chow chow","eagle","tiger","lion","bear"];
 
       function renderButtons() {
 
@@ -11,7 +12,7 @@ var animals = ["bird", "cat", "dog","trump","panda","elephant","chipmunk","pikac
         for (var i = 0; i < animals.length; i++) {
         var a = $("<button>");
 
-          a.addClass("animal");
+          a.addClass("animal btn btn-default");
 
           a.attr("data-name", animals[i]);
 
@@ -43,7 +44,6 @@ var animals = ["bird", "cat", "dog","trump","panda","elephant","chipmunk","pikac
 
 
 
-
     $(document.body).on("click", ".animal", function() {
 
       $("#animal-view").empty();
@@ -62,19 +62,21 @@ var animals = ["bird", "cat", "dog","trump","panda","elephant","chipmunk","pikac
         for (var i = 0; i < results.length; i++) {
 
 
-            var animalDiv = $("<div>");
+            var animalDiv = $("<table>");
+            animalDiv.addClass("col-lg-4");
 
 
             var p = $("<p>").text("Rating: " + results[i].rating);
 
 
             var animalImage = $("<img>");
-
-            animalImage.attr("src", results[i].images.original_still.url);
             console.log(results[i].images.original_still.url)
+            animalImage.attr("src", results[i].images.original_still.url);
             animalImage.attr("state", "still" );
+
             animalImage.attr("animate", results[i].images.original.url);
             animalImage.attr("still",  results[i].images.original_still.url);
+
             animalImage.addClass("gifs");
 
             animalDiv.append(p);
