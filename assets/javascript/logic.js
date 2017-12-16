@@ -71,11 +71,11 @@ var animals = ["bird", "cat", "dog","trump","chicken","pig","walrus","squirrel",
 
             var animalImage = $("<img>");
             console.log(results[i].images.original_still.url)
-            animalImage.attr("src", results[i].images.original_still.url);
+            animalImage.attr("src", results[i].images.fixed_width_still.url);
             animalImage.attr("state", "still" );
 
-            animalImage.attr("animate", results[i].images.original.url);
-            animalImage.attr("still",  results[i].images.original_still.url);
+            animalImage.attr("animate", results[i].images.fixed_width.url);
+            animalImage.attr("still",  results[i].images.fixed_width_still.url);
 
             animalImage.addClass("gifs");
 
