@@ -1,7 +1,7 @@
 
 
 
-
+//array for animals for buttons.
 var animals = ["bird", "cat", "dog","trump","chicken","pig","walrus","squirrel","deer","polar bear","monkey","fish",
 "panda","elephant","chipmunk","pikachu","chow chow","eagle","tiger","lion","bear"];
 
